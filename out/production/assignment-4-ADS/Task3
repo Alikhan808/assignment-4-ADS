@@ -1,0 +1,12 @@
+Shortest path from Edinburgh to Dundee using Dijkstra's algorithm:
+I started by setting Edinburghs distance to 0 and all other cities to infinity.
+First, looking at Edinburgh (0), I updated the distances to its adjacent cities based on the map: Glasgow became 70, Stirling became 50, and Perth became 100.
+I then marked Edinburgh as visited.
+Next, I looked for the unvisited city with the smallest distance, which was Stirling(50). From Stirling, I calculated the path to Perth: 50+40=90.
+Since 90 is less than the previous 100, I updated Perth's distance to 90.
+I also checked Glasgow (50+50 =100), but kept its distance at 70 because it was shorter.
+I marked Stirling as visited.
+Then, I picked Glasgow (70). Checking its neighbors didn't give me any shorter paths to anywhere, so I just marked it as visited.
+After that, the closest unvisited city was Perth (90). From Perth, the only unvisited neighbor was Dundee. The distance would be 90 + 60 = 150. I updated Dundee to 150 and marked Perth as visited.
+Finally, I reached my destination, Dundee, with a total cost of 150.
+The shortest route I found is: Edinburgh > Stirling > Perth > Dundee with a total distance of 150.

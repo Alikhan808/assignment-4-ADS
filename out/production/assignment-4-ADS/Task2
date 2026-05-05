@@ -1,0 +1,9 @@
+BFS Trace starting from node A:
+For the breadth-first search, I used a queue to keep track of levels. I started by visiting node A and queued up all its immediate neighbors: C, B, and D.
+Then, I pulled C from the queue. All of its neighbors (A, B, D) were already either visited or waiting in the queue, so I just moved to the next node.
+Next up was B. Its list is A, C, E, G. Since A and C were already visited, I added the new unvisited neighbors, E and G, to the back of my queue.
+Then I visited D. Its neighbors (C, A) were already done, so nothing new to add.
+After that, I popped E from the queue. Its list is G, F, B. I added the only unvisited node, F, to the queue.
+Next was G. Its neighbors (F, B) were already handled.
+Finally, I visited F. Its neighbors (G, E) were already visited, leaving my queue empty and finishing the search.
+The final order I got for BFS is: A, C, B, D, E, G, F.

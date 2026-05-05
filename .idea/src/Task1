@@ -1,0 +1,10 @@
+DFS Trace starting from node A:
+For the depth-first search, I started at node A. Looking at its adjacency list (C, B, D), I went to the first available node, C.
+At C, the list is A, B, D. Since A was already visited, I moved to the next one, which is B.
+From B (list: A, C, E, G), both A and C were already visited, so I jumped to E.
+At E (list: G, F, B), the next unvisited node is G, so I went there.
+From G (list: F, B), I moved to F.
+At F (list: G, E), all neighbors were already visited. Hitting this dead end, I started backtracking: back to G, back to E, back to B, and finally back to C.
+Once back at C, I checked its list again (A, B, D) and saw that D was still unvisited, so I moved to D.
+At D (list: C, A), all neighbors were visited. I backtracked to C and then to A, finishing the search.
+The final order I got for DFS is: A, C, B, E, G, F, D.
